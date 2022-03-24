@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Document Form</h1>
+    <p>Enter information about the book   </p>
+        <br>
+            <form action="/document_detail" method="post">
+                <input type="hidden" id="op" name="op" value="I">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_idBook">ID</span>
+                    <input type="text" class="form-control" name="id_document" aria-label="Sizing example input" aria-describedby="inputGroup_idBook" placeholder="ISBN">
+
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_titleBook">Title </span>
+                    <input type="text" class="form-control" name="title" aria-label="Sizing example input" aria-describedby="inputGroup_titleBook" placeholder="Title of the book">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_numberPages"> # Page</span>
+                    <input type="text" class="form-control" name="number_page" aria-label="Sizing example input" aria-describedby="inputGroup_numberPages" placeholder="Number pages">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_category"> Category </span>
+                    <input type="text" class="form-control" name="category" aria-label="Sizing example input" aria-describedby="inputGroup_category" placeholder="Book categories">
+                </div>
+
+
+                <h3>Authors</h3>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_authors"> Author</span>
+                    <input type="text" class="form-control" name="name_author" aria-label="Sizing example input" aria-describedby="inputGroup_authors" placeholder="name and lastname 1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup_authors2"> Author2</span>
+                    <input type="text" class="form-control" name="name_author2" aria-label="Sizing example input" aria-describedby="inputGroup_authors2" placeholder="name and lastname 2 ">
+                </div>
+
+                <br >
+                <input class="btn btn-primary" type="submit" name="form" value="Submit" />
+            </form>
+
+
+
+</div>
+{% endblock %}
